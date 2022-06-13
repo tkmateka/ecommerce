@@ -1,1 +1,101 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+app-search-container,
+app-nav,
+app-toolbar,
+app-carousel,
+.fullHeight {
+  height: 100% !important;
+}
+
+$black: #000;
+$white: #fff;
+$yellow: #ffcb30;
+$lightGrey: #f5f5f5;
+
+.blackBG {
+  background-color: $black;
+}
+.yellowBG {
+  background-color: $yellow;
+}
+.lightGreyBG {
+  background-color: $lightGrey;
+}
+.whiteColor {
+  color: $white;
+}
+
+.round {
+  border-radius: 50%;
+}
+.carousel {
+  height: calc(100% - 270px);
+}
+
+// Inputs container mixins
+@mixin inputReset {
+  mat-form-field {
+    width: 100%;
+    line-height: 0.5;
+  }
+  .mat-form-field-wrapper {
+    padding-bottom: 0;
+  }
+  .mat-form-field-infix {
+    border-top: 0 solid transparent;
+  }
+  .mat-input-element {
+    margin-top: -1.9em;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: transparent;
+    border-radius: 4px;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0.8em 0 0.5em 0 !important;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-prefix {
+    top: 0.55em;
+    margin-right: 1em;
+  }
+  .mat-form-field:not(.mat-form-field-appearance-legacy)
+    .mat-form-field-suffix
+    .mat-icon {
+    display: inline !important;
+  }
+}
+
+@mixin greyBorder {
+  border: 1px solid $black;
+  border-radius: 30px;
+  background-color: $white;
+}
+
+.inputContainer {
+  @include inputReset;
+  @include greyBorder;
+  padding: 6px;
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 1.3em 0 0.8em 0;
+  }
+}

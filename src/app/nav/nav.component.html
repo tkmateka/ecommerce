@@ -1,0 +1,20 @@
+<div fxLayout="row" fxLayoutAlign="space-between stretch" fxFill>
+    <div fxLayout="column" fxLayoutAlign="center stretch">
+        <div fxLayout="row" fxLayoutAlign="start stretch" fxLayoutGap="1em">
+            <div fxLayout="column" *ngFor="let nav of navItems">
+                <p>{{nav}}</p>
+            </div>
+        </div>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="center stretch" fxFlex="160px">
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxFlex="100" class="blackBG whiteColor">
+            <div fxLayout="column" fxLayoutAlign="center center" fxFlex="55">
+                <p>Cart Item</p>
+            </div>
+            <div fxLayout="column" fxLayoutAlign="center center" fxFlex="40">
+                <span class="material-icons" matBadge="1" matBadgePosition="after"
+                    matBadgeColor="accent">shopping_cart</span>
+            </div>
+        </div>
+    </div>
+</div>
